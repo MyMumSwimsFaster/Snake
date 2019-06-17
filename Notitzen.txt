@@ -1,0 +1,13 @@
+Aufgabenangemessenheit: Ja es unterstütz ihn, es wird angezeigt, wie lange er warten muss & wie er beginnen kann.
+
+Erwartungskonformität: Ja, nach dem Laden startet es und tap to play = start und steuern.
+
+Selbstbeschreibungsfähigkeit: Mit der Zeit, ja
+
+Fehlertoleranz: Nicht möglich
+
+Steuerbarkeit: Ja, er kann selber entscheiden ob er startet oder am Ende noch einmal spielt oder auch pausieren
+
+Individualisierbarkeit: Ja, z.B. Farbe der Schlange ändern
+
+Lernförderlichkeit: Nein
