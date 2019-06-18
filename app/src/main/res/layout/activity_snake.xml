@@ -56,15 +56,6 @@
         tools:layout_editor_absoluteY="668dp" />
 
     <Button
-        android:id="@+id/taptoplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:text="Tap to play"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        tools:layout_editor_absoluteX="150dp" />
-
-    <Button
         android:id="@+id/arrowLeft"
         android:layout_width="59dp"
         android:layout_height="37dp"
@@ -116,10 +107,10 @@
         android:id="@+id/settingsButton"
         android:layout_width="43dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginBottom="296dp"
         android:text="⚙"
         app:layout_constraintBottom_toTopOf="@+id/currentHighscore"
-        tools:layout_editor_absoluteX="374dp" />
+        tools:layout_editor_absoluteX="371dp" />
 
     <Button
         android:id="@+id/creditsButton"
@@ -128,5 +119,25 @@
         android:text="credits"
         tools:layout_editor_absoluteX="153dp"
         tools:layout_editor_absoluteY="11dp" />
+
+    <TextView
+        android:id="@+id/snakeIgnore"
+        android:layout_width="110dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="-----------------------------"
+        app:layout_constraintEnd_toStartOf="@+id/dotIgnore"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <RadioButton
+        android:id="@+id/dotIgnore"
+        android:layout_width="62dp"
+        android:layout_height="25dp"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="144dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
