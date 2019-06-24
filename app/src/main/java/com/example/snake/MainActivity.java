@@ -1,10 +1,10 @@
 package com.example.snake;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,10 +17,8 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-/*                Intent startInten = new Intent(MainActivity.this, StartActivity.class);
-                startActivity(startInten); */
-                finish();
-                new StartActivity();
+              Intent startInten = new Intent(MainActivity.this.getApplicationContext(), StartActivity.class);
+              startActivity(startInten);
             }
         }, WELCOME);
     }
