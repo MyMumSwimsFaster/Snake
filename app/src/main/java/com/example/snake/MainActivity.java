@@ -8,7 +8,7 @@ import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int WELCOME = 10000;
+    private static int WELCOME = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startInten);
                 finish();
             }
-        },WELCOME);
+        }, WELCOME);
     }
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_end);
-//    }
+
+
 }
