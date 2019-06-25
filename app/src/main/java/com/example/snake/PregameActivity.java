@@ -1,5 +1,6 @@
 package com.example.snake;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,6 @@ public class PregameActivity extends AppCompatActivity implements View.OnClickLi
     View view = findViewById(R.id.ingameview);
     button1.setOnClickListener(this);
     view.setOnClickListener(this);
-
     }
 
 
@@ -27,9 +27,9 @@ public class PregameActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.tapToPlay:
-                setContentView(R.layout.activity_ingame);
             case R.id.ingameview:
-                setContentView(R.layout.activity_ingame);
+                Intent startInten = new Intent(PregameActivity.this.getApplicationContext(), IngameActivity.class);
+                startActivity(startInten);
         }
     }
 }
