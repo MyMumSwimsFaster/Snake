@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/gameview"
+        android:id="@+id/ingameview"
         android:layout_width="315dp"
         android:layout_height="335dp"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
         android:layout_marginTop="12dp"
         android:text="Score:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        app:layout_constraintTop_toBottomOf="@+id/ingameview" />
 
     <TextView
         android:id="@+id/currentHighscore"
@@ -39,7 +39,7 @@
         android:layout_marginRight="64dp"
         android:text="Highscore:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        app:layout_constraintTop_toBottomOf="@+id/ingameview" />
 
     <Button
         android:id="@+id/arrowLeft"
@@ -50,7 +50,7 @@
         android:layout_marginRight="4dp"
         android:text="lt"
         app:layout_constraintEnd_toStartOf="@+id/arrowUp"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        app:layout_constraintTop_toBottomOf="@+id/ingameview" />
 
     <Button
         android:id="@+id/arrowRight"
@@ -59,7 +59,7 @@
         android:layout_marginTop="72dp"
         android:text="rt"
         app:layout_constraintStart_toEndOf="@+id/arrowUp"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        app:layout_constraintTop_toBottomOf="@+id/ingameview" />
 
     <Button
         android:id="@+id/arrowUp"
@@ -74,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        app:layout_constraintTop_toBottomOf="@+id/ingameview" />
 
     <Button
         android:id="@+id/arrowDown"
@@ -101,7 +101,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="x"
-        app:layout_constraintEnd_toStartOf="@+id/gameview"
+        app:layout_constraintEnd_toStartOf="@+id/ingameview"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -116,7 +116,7 @@
         android:text="⚙"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/gameview"
+        app:layout_constraintStart_toEndOf="@+id/ingameview"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -142,9 +142,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tap to Play"
-        app:layout_constraintBottom_toBottomOf="@+id/gameview"
-        app:layout_constraintEnd_toEndOf="@+id/gameview"
-        app:layout_constraintStart_toStartOf="@+id/gameview"
-        app:layout_constraintTop_toTopOf="@+id/gameview" />
+        app:layout_constraintBottom_toBottomOf="@+id/ingameview"
+        app:layout_constraintEnd_toEndOf="@+id/ingameview"
+        app:layout_constraintStart_toStartOf="@+id/ingameview"
+        app:layout_constraintTop_toTopOf="@+id/ingameview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
