@@ -49,11 +49,11 @@
         android:id="@+id/currentScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
         android:text="Score:"
-        app:layout_constraintEnd_toStartOf="@+id/currentHighscore"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="284dp" />
+        app:layout_constraintTop_toBottomOf="@+id/endview" />
 
     <TextView
         android:id="@+id/currentHighscore"
@@ -61,38 +61,40 @@
         android:layout_height="wrap_content"
         android:text="Highscore:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toEndOf="@+id/currentScore"
-        tools:layout_editor_absoluteY="284dp" />
+        app:layout_constraintTop_toBottomOf="@+id/endview" />
 
     <Button
         android:id="@+id/playAgain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
         android:text="Play Again"
         app:layout_constraintEnd_toStartOf="@+id/exitGame"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="420dp" />
+        app:layout_constraintTop_toBottomOf="@+id/endview" />
 
     <Button
         android:id="@+id/exitGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
         android:text="Exit Game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/playAgain"
-        tools:layout_editor_absoluteY="420dp" />
+        app:layout_constraintTop_toBottomOf="@+id/endview" />
 
     <Button
         android:id="@+id/credits"
         android:layout_width="92dp"
         android:layout_height="36dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="48dp"
         android:text="credits"
-        app:layout_constraintEnd_toStartOf="@+id/scam"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playAgain" />
 
@@ -100,7 +102,7 @@
         android:id="@+id/scam"
         android:layout_width="45dp"
         android:layout_height="40dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="44dp"
         android:text="+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
