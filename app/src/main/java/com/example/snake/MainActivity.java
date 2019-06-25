@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-              Intent startInten = new Intent(MainActivity.this.getApplicationContext(), IngameActivity.class);
+              Intent startInten = new Intent(MainActivity.this.getApplicationContext(), PregameActivity.class);
               startActivity(startInten);
             }
         }, WELCOME);
