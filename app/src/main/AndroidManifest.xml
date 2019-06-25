@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".IngameActivity">
         </activity>
+        <activity android:name=".SnakeActivity">
+        </activity>
     </application>
 
 </manifest>
