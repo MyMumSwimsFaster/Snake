@@ -29,7 +29,7 @@ public class EndActivity extends AppCompatActivity implements View.OnClickListen
                 closeContextMenu();
                 System.exit(1);
             case R.id.playAgain:
-                Intent startIntent = new Intent(EndActivity.this.getApplicationContext(), IngameActivity.class);
+                Intent startIntent = new Intent(EndActivity.this.getApplicationContext(), GameActivity.class);
                         startActivity(startIntent);
         }
     }

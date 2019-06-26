@@ -3,6 +3,7 @@ package com.example.snake;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -42,7 +43,8 @@ public class GameActivity extends AppCompatActivity {
         highscoreTextView = findViewById(R.id.textView4);
 
         schlangeView = new com.example.snake.SchlangeView(this);
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(900, 900);
+
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(this.getWindow().getWindowManager().getDefaultDisplay().getWidth(), 900);
         schlangeView.setLayoutParams(params);
         RelativeLayout layout = findViewById(R.id.layout1);
         schlangeView.setBackgroundColor(Color.parseColor("#8caf96"));

@@ -13,7 +13,7 @@ public class SchlangeModel {
     private LinkedList<Point> snake = new LinkedList<Point>();
     private SchlangeController schlangeController;
     private final int feldHöhe=30;
-    private final int feldBreite=30;
+    private final int feldBreite=33;
     private Futter futter;
     private int futterX;
     private int futterY;
@@ -66,7 +66,7 @@ public class SchlangeModel {
             }
         }
 
-        if (snake.getFirst().x < 0 || snake.getFirst().x > 29 || snake.getFirst().y < 0 || snake.getFirst().y > 29) {
+        if (snake.getFirst().x < 0 || snake.getFirst().x > 33 || snake.getFirst().y < 0 || snake.getFirst().y > 29) {
             return true;
         }
         return false;
