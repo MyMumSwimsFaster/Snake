@@ -15,8 +15,10 @@ public class PregameActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_pregame);
         Button tapToPlay = findViewById(R.id.tapToPlay);
         View view = findViewById(R.id.ingameview);
+        Button helpButton = findViewById(R.id.helpButton);
         tapToPlay.setOnClickListener(this);
         view.setOnClickListener(this);
+        helpButton.setOnClickListener(this);
     }
 
 
@@ -25,7 +27,12 @@ public class PregameActivity extends AppCompatActivity implements View.OnClickLi
         switch(view.getId()) {
             case R.id.tapToPlay:
             case R.id.ingameview:
-                Intent startInten = new Intent(PregameActivity.this.getApplicationContext(), GameActivity.class);
+                Intent startIntent = new Intent(PregameActivity.this.getApplicationContext(), GameActivity.class);
+                startActivity(startIntent);
+        }
+        switch(view.getId()){
+            case R.id.helpButton:
+                Intent startInten = new Intent(PregameActivity.this.getApplicationContext(), HelpActivity.class);
                 startActivity(startInten);
         }
     }
