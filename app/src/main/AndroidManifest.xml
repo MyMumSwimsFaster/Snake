@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".IngameActivity">
         </activity>
+        <activity android:name=".EndActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -9,17 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class PregameActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button button;
-    private SnakeEngine snakeEngine;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_pregame);
-    Button button1 = findViewById(R.id.tapToPlay);
-    View view = findViewById(R.id.ingameview);
-    button1.setOnClickListener(this);
-    view.setOnClickListener(this);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pregame);
+        Button tapToPlay = findViewById(R.id.tapToPlay);
+        View view = findViewById(R.id.ingameview);
+        tapToPlay.setOnClickListener(this);
+        view.setOnClickListener(this);
     }
 
 
