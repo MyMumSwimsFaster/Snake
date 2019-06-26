@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int WELCOME = 5000;
+    public final static int WELCOME = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

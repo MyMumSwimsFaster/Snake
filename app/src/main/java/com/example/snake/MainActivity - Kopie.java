@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         schlangeView.setBackgroundColor(Color.YELLOW);
         layout.addView(schlangeView);
     }
-
+    
     public   Button  getHoch() { return hoch; }
     public  Button getRechts() { return rechts;}
     public  Button getUnten() { return unten; }
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {e.printStackTrace();}
         mp.start();
         mp.setLooping(true);
-    }
+}
 
     @Override
     public void onRestart() {
