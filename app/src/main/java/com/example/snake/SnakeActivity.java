@@ -1,12 +1,14 @@
 package com.example.snake;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Point;
 import android.view.Display;
-import android.view.View;
+
+import com.example.snake.SnakeEngine;
 
 public class SnakeActivity extends Activity {
 
@@ -18,14 +20,11 @@ public class SnakeActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         // Get the pixel dimensions of the screen
-
-
-        View display = findViewById(R.id.gameview);
+        Display display = getWindowManager().getDefaultDisplay();
 
         // Initialize the result into a Point object
         Point size = new Point();
-        display.setX(0);
-        display.setY(0);
+        display.getSize(size);
 
         // Create a new instance of the SnakeEngine class
         snakeEngine = new SnakeEngine(this, size);
