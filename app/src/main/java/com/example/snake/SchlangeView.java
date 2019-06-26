@@ -113,20 +113,20 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback{
         futterX = futter.getFutterX();
         futterY = futter.getFutterY();
 
-        p.setColor(Color.GREEN);
+        p.setColor(Color.RED);
         canvas.drawRect(futterX*kästchenGröße, futterY*kästchenGröße,futterX*kästchenGröße+kästchenGröße,futterY*kästchenGröße+kästchenGröße,p );
 
         for (int i = 0; i < snake.size(); i++) {
             Point point;
 
             if(i==0) {
-                p.setColor(Color.BLUE);
+                p.setColor(Color.BLACK);
                 point = snake.get(i);
                 canvas.drawRect(point.x * kästchenGröße, point.y * kästchenGröße, point.x * kästchenGröße + kästchenGröße, point.y * kästchenGröße + kästchenGröße, p);
             }
 
             else {
-                p.setColor(Color.RED);
+                p.setColor(Color.BLACK);
                 point = snake.get(i);
                 canvas.drawRect(point.x * kästchenGröße, point.y * kästchenGröße, point.x * kästchenGröße + kästchenGröße, point.y * kästchenGröße + kästchenGröße, p);
             }

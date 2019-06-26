@@ -45,7 +45,7 @@ public class GameActivity extends AppCompatActivity {
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(900, 900);
         schlangeView.setLayoutParams(params);
         RelativeLayout layout = findViewById(R.id.layout1);
-        schlangeView.setBackgroundColor(Color.YELLOW);
+        schlangeView.setBackgroundColor(Color.parseColor("#8caf96"));
         layout.addView(schlangeView);
     }
 
