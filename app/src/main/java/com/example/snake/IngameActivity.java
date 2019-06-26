@@ -14,8 +14,8 @@ public class IngameActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingame);
 
-    Button credits = findViewById(R.id.creditsButton);
-    credits.setOnClickListener(this);
+        Button credits = findViewById(R.id.creditsButton);
+        credits.setOnClickListener(this);
 
     }
 

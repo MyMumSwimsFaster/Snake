@@ -12,8 +12,8 @@ public class Futter {
     private final int feldBreite = 30;
 
     public void zufälligesEssen() {
-        futterX= (int) (Math.random() * (feldBreite-2)+1);
-        futterY= (int) (Math.random()* (feldHöhe-2)+1);
+        futterX = (int) (Math.random() * (feldBreite - 2) + 1);
+        futterY = (int) (Math.random() * (feldHöhe - 2) + 1);
     }
 
     public int getFutterX() {

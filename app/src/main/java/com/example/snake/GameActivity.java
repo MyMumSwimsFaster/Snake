@@ -3,7 +3,6 @@ package com.example.snake;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,13 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GameActivity extends AppCompatActivity {
 
-    private  Button hoch;
-    private  Button rechts;
-    private  Button unten;
-    private  Button links;
+    private Button hoch;
+    private Button rechts;
+    private Button unten;
+    private Button links;
     private TextView punkteText;
     private TextView punkteTextView;
-    private  MediaPlayer mp = new MediaPlayer();
+    private MediaPlayer mp = new MediaPlayer();
     private TextView highscoreText;
     private TextView highscoreTextView;
     private boolean pause = false;
@@ -51,14 +50,34 @@ public class GameActivity extends AppCompatActivity {
         layout.addView(schlangeView);
     }
 
-    public   Button  getHoch() { return hoch; }
-    public  Button getRechts() { return rechts;}
-    public  Button getUnten() { return unten; }
-    public Button getLinks() { return links; }
-    public TextView getPunkteTextView() { return punkteTextView;}
+    public Button getHoch() {
+        return hoch;
+    }
+
+    public Button getRechts() {
+        return rechts;
+    }
+
+    public Button getUnten() {
+        return unten;
+    }
+
+    public Button getLinks() {
+        return links;
+    }
+
+    public TextView getPunkteTextView() {
+        return punkteTextView;
+    }
+
     //public  MediaPlayer getMediaPlayer(){ return mp;}
-    public  TextView getHighscoreTextView(){return highscoreTextView;}
-    public boolean getPause() { return pause;}
+    public TextView getHighscoreTextView() {
+        return highscoreTextView;
+    }
+
+    public boolean getPause() {
+        return pause;
+    }
 
 
     /*public void initalisiereMediaPlayer() {

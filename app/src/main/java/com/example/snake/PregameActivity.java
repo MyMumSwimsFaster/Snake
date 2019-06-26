@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PregameActivity extends AppCompatActivity implements View.OnClickListener{
+public class PregameActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +24,13 @@ public class PregameActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.tapToPlay:
             case R.id.ingameview:
                 Intent startIntent = new Intent(PregameActivity.this.getApplicationContext(), GameActivity.class);
                 startActivity(startIntent);
         }
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.helpButton:
                 Intent startInten = new Intent(PregameActivity.this.getApplicationContext(), HelpActivity.class);
                 startActivity(startInten);

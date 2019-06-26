@@ -14,22 +14,22 @@ public class Punkte {
     }
 
     public void schreibeHighscore() {
-        SharedPreferences pref = mainActivity.getSharedPreferences("GAME",0);
+        SharedPreferences pref = mainActivity.getSharedPreferences("GAME", 0);
         SharedPreferences.Editor editor = pref.edit();
         editor.putInt("HIGHSCORE", highscore);
         editor.commit();
     }
 
     public int ladeHighscore() {
-        SharedPreferences pref = mainActivity.getSharedPreferences("GAME",0);
-        return pref.getInt("HIGHSCORE",0);
+        SharedPreferences pref = mainActivity.getSharedPreferences("GAME", 0);
+        return pref.getInt("HIGHSCORE", 0);
     }
 
     public void setPunkte(int punkte) {
         this.punkte = punkte;
     }
 
-    public  static int getPunkte() {
+    public static int getPunkte() {
         return punkte;
     }
 
@@ -38,10 +38,10 @@ public class Punkte {
     }
 
     public int getHighscore() {
-        return  highscore;
+        return highscore;
     }
 
     public static void resetPunkte() {
-        punkte =0;
+        punkte = 0;
     }
 }

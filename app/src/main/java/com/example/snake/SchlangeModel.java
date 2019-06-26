@@ -12,12 +12,12 @@ public class SchlangeModel {
 
     private LinkedList<Point> snake = new LinkedList<Point>();
     private SchlangeController schlangeController;
-    private final int feldHöhe=30;
-    private final int feldBreite=33;
+    private final int feldHöhe = 30;
+    private final int feldBreite = 33;
     private Futter futter;
     private int futterX;
     private int futterY;
-    private int aktuellePunkte =0;
+    private int aktuellePunkte = 0;
     private Punkte punkte;
 
 
@@ -29,16 +29,16 @@ public class SchlangeModel {
     }
 
     public void startPunktSchlange() {
-        int randomX = (int) (Math.random() * (feldBreite-2)+1);
-        int randomY = (int) (Math.random()* (feldHöhe-2)+1);
-        snake.addFirst(new Point(randomX,randomY));
+        int randomX = (int) (Math.random() * (feldBreite - 2) + 1);
+        int randomY = (int) (Math.random() * (feldHöhe - 2) + 1);
+        snake.addFirst(new Point(randomX, randomY));
     }
 
     public void bewegungSchlange(int richtungX, int richtungY) {
 
         for (int i = snake.size() - 1; i > 0; i--) {
             Point tmp = snake.get(i);
-            tmp.set(snake.get(i-1).x,snake.get(i-1).y);
+            tmp.set(snake.get(i - 1).x, snake.get(i - 1).y);
         }
 
         snake.getFirst().x += richtungX;
@@ -51,16 +51,16 @@ public class SchlangeModel {
         futterY = futter.getFutterY();
 
         if (snake.getFirst().x == futterX && snake.getFirst().y == futterY) { // eat Apple
-            snake.addLast(new Point(snake.getLast().x-1,snake.getLast().y));
+            snake.addLast(new Point(snake.getLast().x - 1, snake.getLast().y));
             futter.zufälligesEssen();
-            aktuellePunkte = aktuellePunkte+1;
+            aktuellePunkte = aktuellePunkte + 1;
             punkte.setPunkte(aktuellePunkte);
         }
     }
 
     public boolean gameOver() {
 
-        for(int i=1; i<snake.size(); i++) {
+        for (int i = 1; i < snake.size(); i++) {
             if (snake.getFirst().x == snake.get(i).x && snake.getFirst().y == snake.get(i).y) {
                 return true;
             }

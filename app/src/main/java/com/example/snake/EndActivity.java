@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class EndActivity extends AppCompatActivity implements View.OnClickListener{
+public class EndActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class EndActivity extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.exitGame:
                 finish();
                 this.closeContextMenu();
@@ -30,7 +30,7 @@ public class EndActivity extends AppCompatActivity implements View.OnClickListen
                 System.exit(1);
             case R.id.playAgain:
                 Intent startIntent = new Intent(EndActivity.this.getApplicationContext(), GameActivity.class);
-                        startActivity(startIntent);
+                startActivity(startIntent);
         }
     }
 }
