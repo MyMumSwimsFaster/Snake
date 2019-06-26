@@ -22,15 +22,15 @@ public class EndActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         switch(view.getId()) {
-            case R.id.playAgain:
-                Intent startIntent = new Intent(EndActivity.this.getApplicationContext(), PregameActivity.class);
-                        startActivity(startIntent);
             case R.id.exitGame:
                 finish();
                 this.closeContextMenu();
                 moveTaskToBack(true);
                 closeContextMenu();
                 System.exit(1);
+            case R.id.playAgain:
+                Intent startIntent = new Intent(EndActivity.this.getApplicationContext(), IngameActivity.class);
+                        startActivity(startIntent);
         }
     }
 }
