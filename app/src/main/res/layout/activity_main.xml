@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:background="@android:color/holo_blue_light"
-    tools:context=".MainActivity">
+    tools:context=".GameActivity">
 
 
     <RelativeLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-      >
+        >
 
         <Button
             android:id="@+id/buttonhoch"
@@ -30,7 +30,8 @@
             android:layout_height="50dp"
             android:layout_alignTop="@+id/buttonlinks"
             android:layout_toEndOf="@+id/buttonhoch"
-            android:text="R" />
+            android:text="R"
+            android:layout_toRightOf="@+id/buttonhoch" />
 
         <Button
             android:id="@+id/buttonunten"
@@ -47,7 +48,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="43dp"
             android:layout_toStartOf="@+id/buttonhoch"
-            android:text="L" />
+            android:text="L"
+            android:layout_toLeftOf="@+id/buttonhoch" />
 
         <TextView
             android:id="@+id/textView1"
@@ -58,7 +60,9 @@
             android:layout_marginBottom="144dp"
             android:layout_marginStart="20dp"
             android:text="Punkte:"
-            android:textSize="13dp" />
+            android:textSize="13dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -67,7 +71,8 @@
             android:layout_alignTop="@+id/textView1"
             android:layout_toEndOf="@+id/textView1"
             android:textSize="13dp"
-            android:text="" />
+            android:text=""
+            android:layout_toRightOf="@+id/textView1" />
 
         <TextView
             android:id="@+id/textView3"
@@ -77,7 +82,9 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="82dp"
             android:textSize="13dp"
-            android:text="Highscore:" />
+            android:text="Highscore:"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="82dp" />
 
         <TextView
             android:id="@+id/textView4"
@@ -87,7 +94,9 @@
             android:layout_marginStart="-82dp"
             android:layout_toEndOf="@+id/textView3"
             android:textSize="13dp"
-            android:text="" />
+            android:text=""
+            android:layout_marginLeft="-82dp"
+            android:layout_toRightOf="@+id/textView3" />
 
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

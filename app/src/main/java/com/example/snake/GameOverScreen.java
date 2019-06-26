@@ -1,23 +1,17 @@
-package ch.zkb.snake;
+package com.example.snake;
 
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
-import android.graphics.Paint;
 import android.view.View;
-import android.widget.RelativeLayout;
-import android.util.Log;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.admin.snake.R;
+public class GameOverScreen extends AppCompatActivity implements View.OnTouchListener {
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        return false;
+    }
 
-public class GameOverScreen extends AppCompatActivity implements View.OnTouchListener{
-
-    private ZeichenView zw ;
+   /* private ZeichenView zw;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +26,8 @@ public class GameOverScreen extends AppCompatActivity implements View.OnTouchLis
     public boolean onTouch(View v, MotionEvent event) {
         int aktion = event.getAction();
 
-        if(aktion==MotionEvent.ACTION_DOWN) {
-            Intent intent = new Intent(this, MainActivity.class);
+        if (aktion == MotionEvent.ACTION_DOWN) {
+            Intent intent = new Intent(this, GameActivity.class);
             this.startActivity(intent);
             return true;
         }
@@ -53,11 +47,11 @@ public class GameOverScreen extends AppCompatActivity implements View.OnTouchLis
             Paint p = new Paint();
             p.setColor(Color.BLACK);
             p.setTextSize(200);
-            canvas.drawText("Game Over",50,400,p);
+            canvas.drawText("Game Over", 50, 400, p);
             p.setTextSize(75);
 
-            canvas.drawText("Deine Punkte:"+Punkte.getPunkte(),300,600,p);
+            canvas.drawText("Deine Punkte:" + Punkte.getPunkte(), 300, 600, p);
             //Punkte.resetPunkte();
         }
-    }
+    }*/
 }

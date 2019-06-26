@@ -8,21 +8,11 @@ import android.widget.Button;
 
 public class IngameActivity extends Activity implements View.OnClickListener {
 
-    private SnakeEngine snakeEngine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingame);
-
-        View gameview = findViewById(R.id.gameview);
-/*
-        // Create a new instance of the SnakeEngine class
-        snakeEngine = new SnakeEngine(this, size);
-
-        // Make snakeEngine the view of the Activity
-        gameview(snakeEngine);
-*/
 
     Button credits = findViewById(R.id.creditsButton);
     credits.setOnClickListener(this);

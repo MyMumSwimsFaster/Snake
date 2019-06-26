@@ -18,9 +18,7 @@
         </activity>
         <activity android:name=".PregameActivity">
         </activity>
-        <activity android:name=".SnakeActivity">
-        </activity>
-        <activity android:name=".IngameActivity">
+        <activity android:name=".GameActivity">
         </activity>
         <activity android:name=".EndActivity">
         </activity>

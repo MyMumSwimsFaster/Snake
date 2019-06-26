@@ -25,7 +25,7 @@ public class PregameActivity extends AppCompatActivity implements View.OnClickLi
         switch(view.getId()) {
             case R.id.tapToPlay:
             case R.id.ingameview:
-                Intent startInten = new Intent(PregameActivity.this.getApplicationContext(), IngameActivity.class);
+                Intent startInten = new Intent(PregameActivity.this.getApplicationContext(), GameActivity.class);
                 startActivity(startInten);
         }
     }
