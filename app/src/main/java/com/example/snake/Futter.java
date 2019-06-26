@@ -1,4 +1,4 @@
-package ch.zkb.snake;
+package com.example.snake;
 
 /*
 create random food

@@ -1,11 +1,9 @@
-package ch.zkb.snake;
+package com.example.snake;
 
 import android.content.Context;
-import java.util.LinkedList;
-
-
 import android.graphics.Point;
-import android.util.Log;
+
+import java.util.LinkedList;
 
 /*
  */

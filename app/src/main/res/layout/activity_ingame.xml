@@ -4,21 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <View
-        android:id="@+id/gameview"
-        android:layout_width="315dp"
-        android:layout_height="337dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".GameActivity">
 
     <TextView
         android:id="@+id/currentScore"
@@ -26,41 +12,39 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginLeft="76dp"
-        android:layout_marginTop="22dp"
         android:text="Score:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        tools:layout_editor_absoluteY="435dp" />
 
     <TextView
         android:id="@+id/currentHighscore"
         android:layout_width="wrap_content"
         android:layout_height="13dp"
-        android:layout_marginTop="22dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:text="Highscore:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        tools:layout_editor_absoluteY="435dp" />
 
     <Button
         android:id="@+id/arrowLeft"
         android:layout_width="59dp"
         android:layout_height="37dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="lt"
         app:layout_constraintEnd_toStartOf="@+id/arrowUp"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        tools:layout_editor_absoluteY="482dp" />
 
     <Button
         android:id="@+id/arrowRight"
         android:layout_width="59dp"
         android:layout_height="40dp"
-        android:layout_marginTop="82dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="rt"
         app:layout_constraintStart_toEndOf="@+id/arrowUp"
-        app:layout_constraintTop_toBottomOf="@+id/gameview" />
+        tools:layout_editor_absoluteY="482dp" />
 
     <Button
         android:id="@+id/arrowUp"
@@ -68,7 +52,7 @@
         android:layout_height="58dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="^      |"
@@ -83,12 +67,12 @@
         android:layout_height="69dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="|    v"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/arrowUp" />
 
@@ -99,10 +83,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="76dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
         android:text="x"
-        app:layout_constraintEnd_toStartOf="@+id/gameview"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,12 +91,9 @@
         android:id="@+id/settingsButton"
         android:layout_width="43dp"
         android:layout_height="38dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginLeft="320dp"
         android:layout_marginTop="76dp"
         android:text="⚙"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/gameview"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -158,6 +136,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/snakeIgnore"
         app:layout_constraintTop_toTopOf="@+id/snakeIgnore" />
+
+    <ImageView
+        android:id="@+id/gameview"
+        android:layout_width="300dp"
+        android:layout_height="327dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteY="76dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

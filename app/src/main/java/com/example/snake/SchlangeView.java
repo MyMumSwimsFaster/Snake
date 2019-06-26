@@ -1,28 +1,26 @@
-package ch.zkb.snake;
+package com.example.snake;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.media.MediaPlayer;
-import android.util.Log;
+import android.graphics.Point;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.TextView;
 
 import java.util.LinkedList;
 import java.util.Timer;
 import java.util.TimerTask;
-import android.graphics.Point;
-import android.widget.TextView;
 
 public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback{
 
     private Timer timer;
     private TimerTask timerTask;
-    private SchlangeModel schlangeModel;
-    private MainActivity mainActivity;
-    private SchlangeController schlangeController;
+    private com.example.snake.SchlangeModel schlangeModel;
+    private GameActivity mainActivity;
+    private com.example.snake.SchlangeController schlangeController;
     private boolean pause;
     private LinkedList<Point> snake = new LinkedList<Point>();
     private int richtungX;
@@ -30,20 +28,20 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback{
     private int futterX;
     private int futterY;
     private final int kästchenGröße=30;
-    private Futter futter;
-    private Punkte punkte;
+    private com.example.snake.Futter futter;
+    private com.example.snake.Punkte punkte;
     private TextView punkteTextView;
     private TextView highscoretextView;
 
     public SchlangeView(Context context) {
         super(context);
-        mainActivity = (MainActivity) context;
-        schlangeModel = new SchlangeModel(context);
+        mainActivity = (GameActivity) context;
+        schlangeModel = new com.example.snake.SchlangeModel(context);
         punkte = schlangeModel.getPunkte();
         punkteTextView= mainActivity.getPunkteTextView();
         highscoretextView = mainActivity.getHighscoreTextView();
         futter = schlangeModel.getFutter();
-        schlangeController = new SchlangeController(context);
+        schlangeController = new com.example.snake.SchlangeController(context);
         initialiesierePunkteStand();
         gameLoop();
     }
@@ -92,7 +90,7 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback{
     }
 
     public void showGameOverScreen() {
-        Intent intent = new Intent(getContext(), GameOverScreen.class);
+        Intent intent = new Intent(getContext(), EndActivity.class);
         getContext().startActivity(intent);
     }
 
@@ -115,20 +113,20 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback{
         futterX = futter.getFutterX();
         futterY = futter.getFutterY();
 
-        p.setColor(Color.GREEN);
+        p.setColor(Color.RED);
         canvas.drawRect(futterX*kästchenGröße, futterY*kästchenGröße,futterX*kästchenGröße+kästchenGröße,futterY*kästchenGröße+kästchenGröße,p );
 
         for (int i = 0; i < snake.size(); i++) {
             Point point;
 
             if(i==0) {
-                p.setColor(Color.BLUE);
+                p.setColor(Color.BLACK);
                 point = snake.get(i);
                 canvas.drawRect(point.x * kästchenGröße, point.y * kästchenGröße, point.x * kästchenGröße + kästchenGröße, point.y * kästchenGröße + kästchenGröße, p);
             }
 
             else {
-                p.setColor(Color.RED);
+                p.setColor(Color.BLACK);
                 point = snake.get(i);
                 canvas.drawRect(point.x * kästchenGröße, point.y * kästchenGröße, point.x * kästchenGröße + kästchenGröße, point.y * kästchenGröße + kästchenGröße, p);
             }

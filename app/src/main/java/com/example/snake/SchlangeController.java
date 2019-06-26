@@ -1,4 +1,4 @@
-package ch.zkb.snake;
+package com.example.snake;
 
 import android.content.Context;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.Button;
 
 public class SchlangeController {//implements View.OnClickListener {
 
-    private MainActivity mainActivity;
+    private GameActivity mainActivity;
     private Button hoch;
     private Button rechts;
     private Button unten;
@@ -16,7 +16,7 @@ public class SchlangeController {//implements View.OnClickListener {
 
 
     public SchlangeController(Context context) {
-        mainActivity = (MainActivity) context;
+        mainActivity = (GameActivity) context;
         hoch = mainActivity.getHoch();
         links = mainActivity.getLinks();
         rechts = mainActivity.getRechts();

@@ -1,17 +1,16 @@
-package ch.zkb.snake;
+package com.example.snake;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.TextView;
 
 public class Punkte {
 
     private int highscore;
     private static int punkte;
-    private MainActivity mainActivity;
+    private GameActivity mainActivity;
 
     public Punkte(Context context) {
-        mainActivity = (MainActivity) context;
+        mainActivity = (GameActivity) context;
     }
 
     public void schreibeHighscore() {
