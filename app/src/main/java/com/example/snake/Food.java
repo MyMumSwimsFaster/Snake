@@ -4,7 +4,7 @@ package com.example.snake;
 create random food
  */
 
-public class Futter {
+public class Food {
 
     private int futterX;
     private int futterY;
