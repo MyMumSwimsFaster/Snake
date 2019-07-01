@@ -5,4 +5,14 @@
     <string name="gear">⚙</string>
     <string name="credits">credits</string>
     <string name="taptoplay">Tap to Play</string>
+    <string name="santicell">SANTICELL</string>
+    <string name="snekk">Snekk</string>
+    <string name="back">Back</string>
+    <string name="helpString">Snake ist ein bekanntes Computerspiel, bei dem man eine Schlange durch ein Spielfeld so steuert, dass sie Futter finden kann. Die Schlange wird mit jedem Futterhappen länger. Unsere Implementierung hält sich an folgende Spielregeln: Der Snake kann mit den Buttons bottom bewegt werden Das Futter wird automatisch an einer zufälligen Position im Feld erzeugt Nach jedem gefressenem Futter wird die Schlange um ein Glied länger und es wird neues Futter erzeugt Wenn die Schlange mit dem Rand oder ihrem Schwanz kollidiert ist GameOver Ziel: Eine möglichst lange Schlange erzeugen.    Hast du alles verstanden? Wenn ja, klicke den Back Button um wieder zurück zum Spiel zu kommen.</string>
+    <string name="help">\?</string>
+    <string name="score">Your Score:</string>
+    <string name="highscore">Your Highscore:</string>
+    <string name="playagain">Play Again</string>
+    <string name="exitgame">Exit Game</string>
+    <string name="add">+</string>
 </resources>

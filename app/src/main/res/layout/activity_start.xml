@@ -7,30 +7,30 @@
     tools:context=".GameActivity">
 
     <TextView
-        android:id="@+id/santicell"
+        android:id="@+id/santicellTxt"
         android:layout_width="169dp"
         android:layout_height="42dp"
         android:layout_marginTop="8dp"
-        android:text="SANTICELL"
+        android:text="@string/santicell"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/snekk"
+        android:id="@+id/snekkTxt"
         android:layout_width="91dp"
         android:layout_height="41dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp"
-        android:text="Snekk"
+        android:text="@string/snekk"
         android:textIsSelectable="false"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/santicell"
+        app:layout_constraintTop_toBottomOf="@+id/santicellTxt"
         app:layout_constraintVertical_bias="0.184" />
 
     <ImageView

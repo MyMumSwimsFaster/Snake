@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/helpView"
         android:layout_width="match_parent"
         android:layout_height="469dp"
-        android:text=" Snake ist ein bekanntes Computerspiel, bei dem man eine Schlange durch ein Spielfeld so steuert, dass sie Futter finden kann. Die Schlange wird mit jedem Futterhappen länger.  Unsere Implementierung hält sich an folgende Spielregeln:  Der Snake kann mit den Buttons bottom bewegt werden Das Futter wird automatisch an einer zufälligen Position im Feld erzeugt Nach jedem gefressenem Futter wird die Schlange um ein Glied länger und es wird neues Futter erzeugt Wenn die Schlange mit dem Rand oder ihrem Schwanz kollidiert ist GameOver Ziel: Eine möglichst lange Schlange erzeugen. \n \nHast du alles verstanden? Wenn ja, klicke den Back Button um wieder zurück zum Spiel zu kommen." />
+        android:text="@string/helpString" />
 
     <Button
         android:id="@+id/helpBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back" />
+        android:text="@string/back" />
 </LinearLayout>
