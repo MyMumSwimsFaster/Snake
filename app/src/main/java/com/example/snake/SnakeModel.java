@@ -8,24 +8,24 @@ import java.util.LinkedList;
 /*
  */
 
-public class SchlangeModel {
+public class SnakeModel {
 
     private LinkedList<Point> snake = new LinkedList<Point>();
-    private SchlangeController schlangeController;
+    private SnakeController snakeController;
     private final int feldHöhe = 30;
     private final int feldBreite = 33;
-    private Futter futter;
+    private Food food;
     private int futterX;
     private int futterY;
     private int aktuellePunkte = 0;
-    private Punkte punkte;
+    private Points points;
 
 
-    public SchlangeModel(Context context) {
-        futter = new Futter();
-        futter.zufälligesEssen();
+    public SnakeModel(Context context) {
+        food = new Food();
+        food.zufälligesEssen();
         startPunktSchlange();
-        punkte = new Punkte(context);
+        points = new Points(context);
     }
 
     public void startPunktSchlange() {
@@ -47,14 +47,14 @@ public class SchlangeModel {
     }
 
     public void essen() {
-        futterX = futter.getFutterX();
-        futterY = futter.getFutterY();
+        futterX = food.getFutterX();
+        futterY = food.getFutterY();
 
         if (snake.getFirst().x == futterX && snake.getFirst().y == futterY) { // eat Apple
             snake.addLast(new Point(snake.getLast().x - 1, snake.getLast().y));
-            futter.zufälligesEssen();
+            food.zufälligesEssen();
             aktuellePunkte = aktuellePunkte + 1;
-            punkte.setPunkte(aktuellePunkte);
+            points.setPunkte(aktuellePunkte);
         }
     }
 
@@ -72,12 +72,12 @@ public class SchlangeModel {
         return false;
     }
 
-    public Punkte getPunkte() {
-        return punkte;
+    public Points getPoints() {
+        return points;
     }
 
-    public Futter getFutter() {
-        return futter;
+    public Food getFood() {
+        return food;
     }
 
     public LinkedList<Point> getSnake() {

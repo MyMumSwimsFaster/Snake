@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.Button;
 
-public class SchlangeController {//implements View.OnClickListener {
+public class SnakeController {
 
     private GameActivity mainActivity;
     private Button top;
@@ -15,7 +15,7 @@ public class SchlangeController {//implements View.OnClickListener {
     private int richtungY;
 
 
-    public SchlangeController(Context context) {
+    public SnakeController(Context context) {
         mainActivity = (GameActivity) context;
         top = mainActivity.gettop();
         left = mainActivity.getleft();

@@ -3,13 +3,13 @@ package com.example.snake;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class Punkte {
+public class Points {
 
     private int highscore;
     private static int punkte;
     private GameActivity mainActivity;
 
-    public Punkte(Context context) {
+    public Points(Context context) {
         mainActivity = (GameActivity) context;
     }
 
