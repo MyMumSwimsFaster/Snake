@@ -21,24 +21,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/settingsButton2"
+        android:id="@+id/settingsButton1.1"
         android:layout_width="43dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="⚙"
+        android:text="@string/gear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/helpButton2"
+        android:id="@+id/helpButton1.1"
         android:layout_width="37dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:text=" ? "
+        android:text="@string/help"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,13 +50,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Your Score:"
+        android:text="@string/score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/endview" />
 
     <TextView
-        android:id="@+id/santicell"
+        android:id="@+id/santicellTxt"
         android:layout_width="112dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
@@ -64,7 +64,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Your Highscore:"
+        android:text="@string/highscore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score" />
@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
-        android:text="Play Again"
+        android:text="@string/playagain"
         app:layout_constraintEnd_toStartOf="@+id/exitGame"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
-        android:text="Exit Game"
+        android:text="@string/exitgame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/playAgain"
@@ -98,7 +98,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginLeft="68dp"
         android:layout_marginTop="48dp"
-        android:text="credits"
+        android:text="@string/credits"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playAgain" />
 
@@ -107,7 +107,7 @@
         android:layout_width="45dp"
         android:layout_height="40dp"
         android:layout_marginTop="44dp"
-        android:text="+"
+        android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/credits"
