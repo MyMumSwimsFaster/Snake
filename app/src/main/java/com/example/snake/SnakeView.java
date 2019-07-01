@@ -97,6 +97,10 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
 
     public void showGameOverScreen() {
         Intent intent = new Intent(getContext(), EndActivity.class);
+        String points = Points.getPoints() + "";
+        String highscore = Points.getHighscore() + "";
+        intent.putExtra("Score", points);
+        intent.putExtra("Highscore", highscore);
         getContext().startActivity(intent);
     }
 

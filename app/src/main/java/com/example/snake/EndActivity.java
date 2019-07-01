@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,10 +23,13 @@ public class EndActivity extends AppCompatActivity implements View.OnClickListen
         playAgain.setOnClickListener(this);
         Button exit = findViewById(R.id.exitGame);
         exit.setOnClickListener(this);
-        /*TextView score = findViewById(R.id.actualscoreTxt);
-        score.setText("");
+        Bundle extras = getIntent().getExtras();
+        String points = extras.getString("Score");
+        String highpoints = extras.getString("Highscore");
+        TextView score = findViewById(R.id.actualscoreTxt);
+        score.setText(points);
         TextView highscore = findViewById(R.id.actualhighscoreTxt);
-        highscore.setText("");*/
+        highscore.setText(highpoints);
     }
 
     @Override
