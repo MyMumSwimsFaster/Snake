@@ -20,7 +20,7 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
     private TimerTask timerTask;
     private SnakeModel snakeModel;
     private GameActivity mainActivity;
-    private com.example.snake.SchlangeController schlangeController;
+    private SnakeController snakeController;
     private boolean pause;
     private LinkedList<Point> snake = new LinkedList<Point>();
     private int richtungX;
@@ -28,8 +28,8 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
     private int futterX;
     private int futterY;
     private final int kästchenGröße = 30;
-    private com.example.snake.Futter futter;
-    private com.example.snake.Punkte punkte;
+    private Food food;
+    private Points points;
     private TextView punkteTextView;
     private TextView highscoretextView;
 
@@ -37,29 +37,29 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
         super(context);
         mainActivity = (GameActivity) context;
         snakeModel = new SnakeModel(context);
-        punkte = snakeModel.getPunkte();
+        points = snakeModel.getPoints();
         punkteTextView = mainActivity.getPunkteTextView();
         highscoretextView = mainActivity.getHighscoreTextView();
-        futter = snakeModel.getFutter();
-        schlangeController = new com.example.snake.SchlangeController(context);
+        food = snakeModel.getFood();
+        snakeController = new SnakeController(context);
         initialiesierePunkteStand();
         gameLoop();
     }
 
     private void initialiesierePunkteStand() {
-        punkte.setPunkte(0);
-        punkte.setHighscore(punkte.ladeHighscore());
+        points.setPunkte(0);
+        points.setHighscore(points.ladeHighscore());
         punkteTextView.setText("" + 0);
-        highscoretextView.setText("" + punkte.getHighscore());
+        highscoretextView.setText("" + points.getHighscore());
     }
 
     private void verwaltePunkte() {
-        if (punkte.getPunkte() > punkte.ladeHighscore()) {
+        if (points.getPunkte() > points.ladeHighscore()) {
 
-            punkte.setHighscore(punkte.getPunkte());
-            highscoretextView.setText("" + punkte.getHighscore());
+            points.setHighscore(points.getPunkte());
+            highscoretextView.setText("" + points.getHighscore());
         }
-        punkteTextView.setText("" + punkte.getPunkte());
+        punkteTextView.setText("" + points.getPunkte());
     }
 
     public void gameLoop() {
@@ -76,8 +76,8 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
                         verwaltePunkte();
                         if (pause == false && isGameOver() == false) {
 
-                            richtungX = schlangeController.getRichtungX();
-                            richtungY = schlangeController.getRichtungY();
+                            richtungX = snakeController.getRichtungX();
+                            richtungY = snakeController.getRichtungY();
 
                             snakeModel.bewegungSchlange(richtungX, richtungY);
                             snake = snakeModel.getSnake();
@@ -98,7 +98,7 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
     public boolean isGameOver() {
 
         if (snakeModel.gameOver() == true) {
-            punkte.schreibeHighscore();
+            points.schreibeHighscore();
             timer.cancel();
             showGameOverScreen();
         }
@@ -111,8 +111,8 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
         super.onDraw(canvas);
         Paint p = new Paint();
         snake = snakeModel.getSnake();
-        futterX = futter.getFutterX();
-        futterY = futter.getFutterY();
+        futterX = food.getFutterX();
+        futterY = food.getFutterY();
 
         p.setColor(Color.RED);
         canvas.drawRect(futterX * kästchenGröße, futterY * kästchenGröße, futterX * kästchenGröße + kästchenGröße, futterY * kästchenGröße + kästchenGröße, p);

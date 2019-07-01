@@ -26,7 +26,7 @@ public class GameActivity extends AppCompatActivity {
     private TextView highscoreTxtView;
     private boolean pause = false;
     private int mediaPlayerStop;
-    private com.example.snake.snakeView snakeView;
+    private SnakeView snakeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class GameActivity extends AppCompatActivity {
         highscoreTxt = findViewById(R.id.textView3);
         highscoreTxtView = findViewById(R.id.textView4);
 
-        snakeView = new com.example.snake.snakeView(this);
+        snakeView = new SnakeView(this);
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(this.getWindow().getWindowManager().getDefaultDisplay().getWidth(), 900);
         snakeView.setLayoutParams(params);
