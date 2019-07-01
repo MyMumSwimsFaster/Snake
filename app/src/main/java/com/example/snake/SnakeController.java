@@ -30,6 +30,9 @@ public class SnakeController {
         top.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bottom.setEnabled(false);
+                right.setEnabled(true);
+                left.setEnabled(true);
                 directionY = -1;
                 directionX = 0;
             }
@@ -38,6 +41,9 @@ public class SnakeController {
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                left.setEnabled(false);
+                top.setEnabled(true);
+                bottom.setEnabled(true);
                 directionY = 0;
                 directionX = 1;
             }
@@ -46,6 +52,9 @@ public class SnakeController {
         bottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                top.setEnabled(false);
+                right.setEnabled(true);
+                left.setEnabled(true);
                 directionY = 1;
                 directionX = 0;
             }
@@ -54,6 +63,9 @@ public class SnakeController {
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                right.setEnabled(false);
+                top.setEnabled(true);
+                bottom.setEnabled(true);
                 directionY = 0;
                 directionX = -1;
             }
