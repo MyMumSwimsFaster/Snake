@@ -7,6 +7,10 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/*
+ * calls activity_help
+ * @author Kevin Thurnes, Alessandro Bachmann & Besfort Dauti
+ * */
 
 public class HelpActivity extends AppCompatActivity implements View.OnClickListener {
 

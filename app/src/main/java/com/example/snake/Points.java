@@ -3,34 +3,39 @@ package com.example.snake;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+/*
+ * handles the actual points and the highscore
+ * @author Kopiert von https://github.com/Linus1905/Android-Snake
+ * */
+
 public class Points {
 
     private int highscore;
-    private static int punkte;
-    private GameActivity mainActivity;
+    private static int points;
+    private GameActivity gameActivity;
 
     public Points(Context context) {
-        mainActivity = (GameActivity) context;
+        gameActivity = (GameActivity) context;
     }
 
-    public void schreibeHighscore() {
-        SharedPreferences pref = mainActivity.getSharedPreferences("GAME", 0);
+    public void writeHighscore() {
+        SharedPreferences pref = gameActivity.getSharedPreferences("GAME", 0);
         SharedPreferences.Editor editor = pref.edit();
         editor.putInt("HIGHSCORE", highscore);
         editor.commit();
     }
 
-    public int ladeHighscore() {
-        SharedPreferences pref = mainActivity.getSharedPreferences("GAME", 0);
+    public int loadHighscore() {
+        SharedPreferences pref = gameActivity.getSharedPreferences("GAME", 0);
         return pref.getInt("HIGHSCORE", 0);
     }
 
-    public void setPunkte(int punkte) {
-        this.punkte = punkte;
+    public void setPoints(int points) {
+        this.points = points;
     }
 
-    public static int getPunkte() {
-        return punkte;
+    public static int getPoints() {
+        return points;
     }
 
     public void setHighscore(int highscore) {
@@ -41,7 +46,4 @@ public class Points {
         return highscore;
     }
 
-    public static void resetPunkte() {
-        punkte = 0;
-    }
 }

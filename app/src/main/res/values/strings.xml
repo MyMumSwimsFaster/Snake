@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Snake</string>
     <string name="title_activity_start2">activity_start2</string>
+    <string name="questionMark">\?</string>
+    <string name="gear">⚙</string>
+    <string name="credits">credits</string>
+    <string name="taptoplay">Tap to Play</string>
 </resources>

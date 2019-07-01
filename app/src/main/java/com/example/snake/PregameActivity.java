@@ -7,6 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/*
+ * calls activity_pregame
+ * @author Kevin Thurnes, Alessandro Bachmann & Besfort Dauti
+ * */
+
 public class PregameActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override

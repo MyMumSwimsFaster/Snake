@@ -14,52 +14,57 @@ import java.util.LinkedList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/*
+ * draws the gamefield and handles the points
+ * @author Kopiert von https://github.com/Linus1905/Android-Snake
+ * */
+
 public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
 
     private Timer timer;
     private TimerTask timerTask;
     private SnakeModel snakeModel;
-    private GameActivity mainActivity;
+    private GameActivity gameActivity;
     private SnakeController snakeController;
     private boolean pause;
     private LinkedList<Point> snake = new LinkedList<Point>();
-    private int richtungX;
-    private int richtungY;
-    private int futterX;
-    private int futterY;
-    private final int kästchenGröße = 30;
+    private int directionX;
+    private int directionY;
+    private int foodX;
+    private int foodY;
+    private final int boxSize = 30;
     private Food food;
     private Points points;
-    private TextView punkteTextView;
-    private TextView highscoretextView;
+    private TextView pointsTxtView;
+    private TextView highscoreTxtView;
 
     public SnakeView(Context context) {
         super(context);
-        mainActivity = (GameActivity) context;
+        gameActivity = (GameActivity) context;
         snakeModel = new SnakeModel(context);
         points = snakeModel.getPoints();
-        punkteTextView = mainActivity.getPunkteTextView();
-        highscoretextView = mainActivity.getHighscoreTextView();
+        pointsTxtView = gameActivity.getPointsTxtView();
+        highscoreTxtView = gameActivity.getHighscoreTxtView();
         food = snakeModel.getFood();
         snakeController = new SnakeController(context);
-        initialiesierePunkteStand();
+        initialiseScore();
         gameLoop();
     }
 
-    private void initialiesierePunkteStand() {
-        points.setPunkte(0);
-        points.setHighscore(points.ladeHighscore());
-        punkteTextView.setText("" + 0);
-        highscoretextView.setText("" + points.getHighscore());
+    private void initialiseScore() {
+        points.setPoints(0);
+        points.setHighscore(points.loadHighscore());
+        pointsTxtView.setText("" + 0);
+        highscoreTxtView.setText("" + points.getHighscore());
     }
 
-    private void verwaltePunkte() {
-        if (points.getPunkte() > points.ladeHighscore()) {
+    private void managePoints() {
+        if (points.getPoints() > points.loadHighscore()) {
 
-            points.setHighscore(points.getPunkte());
-            highscoretextView.setText("" + points.getHighscore());
+            points.setHighscore(points.getPoints());
+            highscoreTxtView.setText("" + points.getHighscore());
         }
-        punkteTextView.setText("" + points.getPunkte());
+        pointsTxtView.setText("" + points.getPoints());
     }
 
     public void gameLoop() {
@@ -68,18 +73,18 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
 
             @Override
             public void run() {
-                mainActivity.runOnUiThread(new TimerTask() {
+                gameActivity.runOnUiThread(new TimerTask() {
 
                     @Override
                     public void run() {
-                        pause = mainActivity.getPause();
-                        verwaltePunkte();
+                        pause = gameActivity.getPause();
+                        managePoints();
                         if (pause == false && isGameOver() == false) {
 
-                            richtungX = snakeController.getRichtungX();
-                            richtungY = snakeController.getRichtungY();
+                            directionX = snakeController.getDirectionX();
+                            directionY = snakeController.getDirectionY();
 
-                            snakeModel.bewegungSchlange(richtungX, richtungY);
+                            snakeModel.motionSnake(directionX, directionY);
                             snake = snakeModel.getSnake();
                             invalidate();
                         }
@@ -98,7 +103,7 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
     public boolean isGameOver() {
 
         if (snakeModel.gameOver() == true) {
-            points.schreibeHighscore();
+            points.writeHighscore();
             timer.cancel();
             showGameOverScreen();
         }
@@ -111,11 +116,11 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
         super.onDraw(canvas);
         Paint p = new Paint();
         snake = snakeModel.getSnake();
-        futterX = food.getFutterX();
-        futterY = food.getFutterY();
+        foodX = food.getFoodX();
+        foodY = food.getFoodY();
 
         p.setColor(Color.RED);
-        canvas.drawRect(futterX * kästchenGröße, futterY * kästchenGröße, futterX * kästchenGröße + kästchenGröße, futterY * kästchenGröße + kästchenGröße, p);
+        canvas.drawRect(foodX * boxSize, foodY * boxSize, foodX * boxSize + boxSize, foodY * boxSize + boxSize, p);
 
         for (int i = 0; i < snake.size(); i++) {
             Point point;
@@ -123,11 +128,11 @@ public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
             if (i == 0) {
                 p.setColor(Color.BLACK);
                 point = snake.get(i);
-                canvas.drawRect(point.x * kästchenGröße, point.y * kästchenGröße, point.x * kästchenGröße + kästchenGröße, point.y * kästchenGröße + kästchenGröße, p);
+                canvas.drawRect(point.x * boxSize, point.y * boxSize, point.x * boxSize + boxSize, point.y * boxSize + boxSize, p);
             } else {
                 p.setColor(Color.BLACK);
                 point = snake.get(i);
-                canvas.drawRect(point.x * kästchenGröße, point.y * kästchenGröße, point.x * kästchenGröße + kästchenGröße, point.y * kästchenGröße + kästchenGröße, p);
+                canvas.drawRect(point.x * boxSize, point.y * boxSize, point.x * boxSize + boxSize, point.y * boxSize + boxSize, p);
             }
         }
     }

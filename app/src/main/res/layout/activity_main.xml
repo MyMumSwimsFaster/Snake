@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:background="@android:color/darker_gray"
+    android:orientation="horizontal"
     tools:context=".GameActivity">
 
 
     <RelativeLayout
-        android:id="@+id/layout1"
+        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
 
         <Button
             android:id="@+id/buttontop"
@@ -31,8 +29,8 @@
             android:layout_height="50dp"
             android:layout_alignTop="@+id/buttonleft"
             android:layout_toEndOf="@+id/buttontop"
-            android:text="R"
-            android:layout_toRightOf="@+id/buttontop" />
+            android:layout_toRightOf="@+id/buttontop"
+            android:text="R" />
 
         <Button
             android:id="@+id/buttonbottom"
@@ -49,55 +47,55 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="43dp"
             android:layout_toStartOf="@+id/buttontop"
-            android:text="L"
-            android:layout_toLeftOf="@+id/buttontop" />
+            android:layout_toLeftOf="@+id/buttontop"
+            android:text="L" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/pointsTxtView"
             android:layout_width="50dp"
             android:layout_height="25dp"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="144dp"
-            android:layout_marginStart="20dp"
-            android:text="Punkte:"
-            android:textSize="13dp"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp" />
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="144dp"
+            android:text="Punkte:"
+            android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/scoreTxtView"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_alignTop="@+id/textView1"
-            android:layout_toEndOf="@+id/textView1"
-            android:textSize="13dp"
+            android:layout_alignTop="@+id/pointsTxtView"
+            android:layout_toEndOf="@+id/pointsTxtView"
+            android:layout_toRightOf="@+id/pointsTxtView"
             android:text=""
-            android:layout_toRightOf="@+id/textView1" />
+            android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/highscoreTxtView"
             android:layout_width="75dp"
             android:layout_height="25dp"
-            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignBottom="@+id/pointsTxtView"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="82dp"
-            android:textSize="13dp"
-            android:text="Highscore:"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="82dp" />
+            android:layout_marginEnd="82dp"
+            android:layout_marginRight="82dp"
+            android:text="Highscore:"
+            android:textSize="13dp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/highscorepointsTxtView"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_alignTop="@+id/textView1"
+            android:layout_alignTop="@+id/pointsTxtView"
             android:layout_marginStart="-82dp"
-            android:layout_toEndOf="@+id/textView3"
-            android:textSize="13dp"
-            android:text=""
             android:layout_marginLeft="-82dp"
-            android:layout_toRightOf="@+id/textView3" />
+            android:layout_toEndOf="@+id/highscoreTxtView"
+            android:layout_toRightOf="@+id/highscoreTxtView"
+            android:text=""
+            android:textSize="13dp" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,8 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 /*
-* @author Kopiert von https://github.com/Linus1905/Android-Snake
-* */
+ * creates the game and calls activity_main
+ * @author Kopiert von https://github.com/Linus1905/Android-Snake
+ * */
 
 public class GameActivity extends AppCompatActivity {
 
@@ -36,41 +37,41 @@ public class GameActivity extends AppCompatActivity {
         right = findViewById(R.id.buttonright);
         bottom = findViewById(R.id.buttonbottom);
         left = findViewById(R.id.buttonleft);
-        pointsTxt = findViewById(R.id.textView1);
-        pointsTxtView = findViewById(R.id.textView2);
-        highscoreTxt = findViewById(R.id.textView3);
-        highscoreTxtView = findViewById(R.id.textView4);
+        pointsTxt = findViewById(R.id.pointsTxtView);
+        pointsTxtView = findViewById(R.id.scoreTxtView);
+        highscoreTxt = findViewById(R.id.highscoreTxtView);
+        highscoreTxtView = findViewById(R.id.highscorepointsTxtView);
 
         snakeView = new SnakeView(this);
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(this.getWindow().getWindowManager().getDefaultDisplay().getWidth(), 900);
         snakeView.setLayoutParams(params);
-        RelativeLayout layout = findViewById(R.id.layout1);
+        RelativeLayout layout = findViewById(R.id.mainLayout);
         snakeView.setBackgroundColor(Color.parseColor("#8caf96"));
         layout.addView(snakeView);
     }
 
-    public Button gettop() {
+    public Button getTop() {
         return top;
     }
 
-    public Button getright() {
+    public Button getRight() {
         return right;
     }
 
-    public Button getbottom() {
+    public Button getBottom() {
         return bottom;
     }
 
-    public Button getleft() {
+    public Button getLeft() {
         return left;
     }
 
-    public TextView getPunkteTextView() {
+    public TextView getPointsTxtView() {
         return pointsTxtView;
     }
 
-    public TextView getHighscoreTextView() {
+    public TextView getHighscoreTxtView() {
         return highscoreTxtView;
     }
 

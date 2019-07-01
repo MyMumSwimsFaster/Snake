@@ -15,10 +15,10 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@color/colorMint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creditsButton"
-        android:background= "@color/colorMint" />
+        app:layout_constraintTop_toBottomOf="@+id/creditsButton" />
 
     <Button
         android:id="@+id/helpButton"
@@ -29,7 +29,7 @@
         android:layout_marginTop="76dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text=" ? "
+        android:text="@string/questionMark"
         app:layout_constraintEnd_toStartOf="@+id/ingameview"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="76dp"
-        android:text="⚙"
+        android:text="@string/gear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/ingameview"
@@ -58,7 +58,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="credits"
+        android:text="@string/credits"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -70,7 +70,7 @@
         android:id="@+id/tapToPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tap to Play"
+        android:text="@string/taptoplay"
         app:layout_constraintBottom_toBottomOf="@+id/ingameview"
         app:layout_constraintEnd_toEndOf="@+id/ingameview"
         app:layout_constraintStart_toStartOf="@+id/ingameview"

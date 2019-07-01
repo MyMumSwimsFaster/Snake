@@ -1,27 +1,28 @@
 package com.example.snake;
 
 /*
-create random food
- */
+ * generates food
+ * @author Kopiert von https://github.com/Linus1905/Android-Snake
+ * */
 
 public class Food {
 
-    private int futterX;
-    private int futterY;
-    private final int feldHöhe = 30;
-    private final int feldBreite = 30;
+    private int foodX;
+    private int foodY;
+    private final int fieldheight = 30;
+    private final int fieldwidth = 30;
 
-    public void zufälligesEssen() {
-        futterX = (int) (Math.random() * (feldBreite - 2) + 1);
-        futterY = (int) (Math.random() * (feldHöhe - 2) + 1);
+    public void randomFood() {
+        foodX = (int) (Math.random() * (fieldwidth - 2) + 1);
+        foodY = (int) (Math.random() * (fieldheight - 2) + 1);
     }
 
-    public int getFutterX() {
-        return futterX;
+    public int getFoodX() {
+        return foodX;
     }
 
-    public int getFutterY() {
-        return futterY;
+    public int getFoodY() {
+        return foodY;
     }
 
 }

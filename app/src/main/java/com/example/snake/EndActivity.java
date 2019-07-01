@@ -7,6 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/*
+ * calls activity_end
+ * @author Kevin Thurnes, Alessandro Bachmann & Besfort Dauti
+ * */
+
 public class EndActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override

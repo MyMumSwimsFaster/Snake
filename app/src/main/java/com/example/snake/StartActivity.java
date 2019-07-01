@@ -6,9 +6,14 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+/*
+ * calls activity_start
+ * @author Kevin Thurnes, Alessandro Bachmann & Besfort Dauti
+ * */
 
-    public final static int WELCOME = 5000;
+public class StartActivity extends AppCompatActivity {
+
+    public final static int WELCOME = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent startInten = new Intent(MainActivity.this.getApplicationContext(), PregameActivity.class);
+                Intent startInten = new Intent(StartActivity.this.getApplicationContext(), PregameActivity.class);
                 startActivity(startInten);
             }
         }, WELCOME);
