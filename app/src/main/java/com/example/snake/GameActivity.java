@@ -9,85 +9,74 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/*
+* @author Kopiert von https://github.com/Linus1905/Android-Snake
+* */
 
 public class GameActivity extends AppCompatActivity {
 
-    private Button hoch;
-    private Button rechts;
-    private Button unten;
-    private Button links;
-    private TextView punkteText;
-    private TextView punkteTextView;
+    private Button top;
+    private Button right;
+    private Button bottom;
+    private Button left;
+    private TextView pointsTxt;
+    private TextView pointsTxtView;
     private MediaPlayer mp = new MediaPlayer();
-    private TextView highscoreText;
-    private TextView highscoreTextView;
+    private TextView highscoreTxt;
+    private TextView highscoreTxtView;
     private boolean pause = false;
     private int mediaPlayerStop;
-
-    private com.example.snake.SchlangeView schlangeView;
-    private com.example.snake.SchlangeModel schlangeModel;
-    private com.example.snake.SchlangeController schlangeController;
+    private com.example.snake.snakeView snakeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        hoch = findViewById(R.id.buttonhoch);
-        rechts = findViewById(R.id.buttonrechts);
-        unten = findViewById(R.id.buttonunten);
-        links = findViewById(R.id.buttonlinks);
-        punkteText = findViewById(R.id.textView1);
-        punkteTextView = findViewById(R.id.textView2);
-        highscoreText = findViewById(R.id.textView3);
-        highscoreTextView = findViewById(R.id.textView4);
+        top = findViewById(R.id.buttontop);
+        right = findViewById(R.id.buttonright);
+        bottom = findViewById(R.id.buttonbottom);
+        left = findViewById(R.id.buttonleft);
+        pointsTxt = findViewById(R.id.textView1);
+        pointsTxtView = findViewById(R.id.textView2);
+        highscoreTxt = findViewById(R.id.textView3);
+        highscoreTxtView = findViewById(R.id.textView4);
 
-        schlangeView = new com.example.snake.SchlangeView(this);
+        snakeView = new com.example.snake.snakeView(this);
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(this.getWindow().getWindowManager().getDefaultDisplay().getWidth(), 900);
-        schlangeView.setLayoutParams(params);
+        snakeView.setLayoutParams(params);
         RelativeLayout layout = findViewById(R.id.layout1);
-        schlangeView.setBackgroundColor(Color.parseColor("#8caf96"));
-        layout.addView(schlangeView);
+        snakeView.setBackgroundColor(Color.parseColor("#8caf96"));
+        layout.addView(snakeView);
     }
 
-    public Button getHoch() {
-        return hoch;
+    public Button gettop() {
+        return top;
     }
 
-    public Button getRechts() {
-        return rechts;
+    public Button getright() {
+        return right;
     }
 
-    public Button getUnten() {
-        return unten;
+    public Button getbottom() {
+        return bottom;
     }
 
-    public Button getLinks() {
-        return links;
+    public Button getleft() {
+        return left;
     }
 
     public TextView getPunkteTextView() {
-        return punkteTextView;
+        return pointsTxtView;
     }
 
-    //public  MediaPlayer getMediaPlayer(){ return mp;}
     public TextView getHighscoreTextView() {
-        return highscoreTextView;
+        return highscoreTxtView;
     }
 
     public boolean getPause() {
         return pause;
     }
-
-
-    /*public void initalisiereMediaPlayer() {
-        try {
-            mp.setDataSource( this,Uri.parse("android.resource://com.example.admin.snake/raw/hintergrund"));
-            mp.prepare();
-        } catch (Exception e) {e.printStackTrace();}
-        mp.start();
-        mp.setLooping(true);
-    }*/
 
     @Override
     public void onRestart() {

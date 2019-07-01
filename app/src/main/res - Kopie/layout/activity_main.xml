@@ -16,7 +16,7 @@
       >
 
         <Button
-            android:id="@+id/buttonhoch"
+            android:id="@+id/buttontop"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
@@ -25,15 +25,15 @@
             android:text="H" />
 
         <Button
-            android:id="@+id/buttonrechts"
+            android:id="@+id/buttonright"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignTop="@+id/buttonlinks"
-            android:layout_toEndOf="@+id/buttonhoch"
+            android:layout_alignTop="@+id/buttonleft"
+            android:layout_toEndOf="@+id/buttontop"
             android:text="R" />
 
         <Button
-            android:id="@+id/buttonunten"
+            android:id="@+id/buttonbottom"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
@@ -41,12 +41,12 @@
             android:text="U" />
 
         <Button
-            android:id="@+id/buttonlinks"
+            android:id="@+id/buttonleft"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="43dp"
-            android:layout_toStartOf="@+id/buttonhoch"
+            android:layout_toStartOf="@+id/buttontop"
             android:text="L" />
 
         <TextView

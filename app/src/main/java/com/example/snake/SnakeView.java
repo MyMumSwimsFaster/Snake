@@ -14,11 +14,11 @@ import java.util.LinkedList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback {
+public class SnakeView extends SurfaceView implements SurfaceHolder.Callback {
 
     private Timer timer;
     private TimerTask timerTask;
-    private com.example.snake.SchlangeModel schlangeModel;
+    private SnakeModel snakeModel;
     private GameActivity mainActivity;
     private com.example.snake.SchlangeController schlangeController;
     private boolean pause;
@@ -33,14 +33,14 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback 
     private TextView punkteTextView;
     private TextView highscoretextView;
 
-    public SchlangeView(Context context) {
+    public SnakeView(Context context) {
         super(context);
         mainActivity = (GameActivity) context;
-        schlangeModel = new com.example.snake.SchlangeModel(context);
-        punkte = schlangeModel.getPunkte();
+        snakeModel = new SnakeModel(context);
+        punkte = snakeModel.getPunkte();
         punkteTextView = mainActivity.getPunkteTextView();
         highscoretextView = mainActivity.getHighscoreTextView();
-        futter = schlangeModel.getFutter();
+        futter = snakeModel.getFutter();
         schlangeController = new com.example.snake.SchlangeController(context);
         initialiesierePunkteStand();
         gameLoop();
@@ -79,8 +79,8 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback 
                             richtungX = schlangeController.getRichtungX();
                             richtungY = schlangeController.getRichtungY();
 
-                            schlangeModel.bewegungSchlange(richtungX, richtungY);
-                            snake = schlangeModel.getSnake();
+                            snakeModel.bewegungSchlange(richtungX, richtungY);
+                            snake = snakeModel.getSnake();
                             invalidate();
                         }
                     }
@@ -97,7 +97,7 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback 
 
     public boolean isGameOver() {
 
-        if (schlangeModel.gameOver() == true) {
+        if (snakeModel.gameOver() == true) {
             punkte.schreibeHighscore();
             timer.cancel();
             showGameOverScreen();
@@ -110,7 +110,7 @@ public class SchlangeView extends SurfaceView implements SurfaceHolder.Callback 
 
         super.onDraw(canvas);
         Paint p = new Paint();
-        snake = schlangeModel.getSnake();
+        snake = snakeModel.getSnake();
         futterX = futter.getFutterX();
         futterY = futter.getFutterY();
 

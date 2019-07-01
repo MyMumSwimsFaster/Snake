@@ -7,22 +7,22 @@ import android.widget.Button;
 public class SchlangeController {//implements View.OnClickListener {
 
     private GameActivity mainActivity;
-    private Button hoch;
-    private Button rechts;
-    private Button unten;
-    private Button links;
+    private Button top;
+    private Button right;
+    private Button bottom;
+    private Button left;
     private int richtungX;
     private int richtungY;
 
 
     public SchlangeController(Context context) {
         mainActivity = (GameActivity) context;
-        hoch = mainActivity.getHoch();
-        links = mainActivity.getLinks();
-        rechts = mainActivity.getRechts();
-        unten = mainActivity.getUnten();
+        top = mainActivity.gettop();
+        left = mainActivity.getleft();
+        right = mainActivity.getright();
+        bottom = mainActivity.getbottom();
 
-        hoch.setOnClickListener(new View.OnClickListener() {
+        top.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 richtungY = -1;
@@ -30,7 +30,7 @@ public class SchlangeController {//implements View.OnClickListener {
             }
         });
 
-        rechts.setOnClickListener(new View.OnClickListener() {
+        right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 richtungY = 0;
@@ -38,7 +38,7 @@ public class SchlangeController {//implements View.OnClickListener {
             }
         });
 
-        unten.setOnClickListener(new View.OnClickListener() {
+        bottom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 richtungY = 1;
@@ -46,7 +46,7 @@ public class SchlangeController {//implements View.OnClickListener {
             }
         });
 
-        links.setOnClickListener(new View.OnClickListener() {
+        left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 richtungY = 0;
