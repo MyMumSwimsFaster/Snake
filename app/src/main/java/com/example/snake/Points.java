@@ -10,7 +10,7 @@ import android.content.SharedPreferences;
 
 public class Points {
 
-    private int highscore;
+    private static int highscore;
     private static int points;
     private GameActivity gameActivity;
 
@@ -42,7 +42,7 @@ public class Points {
         this.highscore = highscore;
     }
 
-    public int getHighscore() {
+    public static int getHighscore() {
         return highscore;
     }
 

@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <TextView
+        android:id="@+id/highscorepointsTxtView2"
+        android:layout_width="47dp"
+        android:layout_height="37dp"
+        android:layout_alignTop="@+id/pointsTxtView"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/highscoreTxtView"
+        android:layout_toRightOf="@+id/highscoreTxtView"
+        android:text=""
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/highscoreTxt"
+        tools:layout_editor_absoluteX="182dp" />
+
     <View
         android:id="@+id/endview"
         android:layout_width="257dp"
@@ -43,9 +56,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/score"
-        android:layout_width="108dp"
-        android:layout_height="37dp"
+        android:id="@+id/scoreTxt"
+        android:layout_width="103dp"
+        android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
@@ -54,20 +67,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/endview" />
-
-    <TextView
-        android:id="@+id/santicellTxt"
-        android:layout_width="112dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/highscore"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score" />
 
     <Button
         android:id="@+id/playAgain"
@@ -112,5 +111,29 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/credits"
         app:layout_constraintTop_toBottomOf="@+id/exitGame" />
+
+    <TextView
+        android:id="@+id/highscoreTxt"
+        android:layout_width="136dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/highscore"
+        app:layout_constraintEnd_toEndOf="@+id/endview"
+        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintStart_toStartOf="@+id/endview"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTxt" />
+
+    <TextView
+        android:id="@+id/scoreTxtView2"
+        android:layout_width="41dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/pointsTxtView"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/pointsTxtView"
+        android:layout_toRightOf="@+id/pointsTxtView"
+        android:text=""
+        android:textSize="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTxt"
+        tools:layout_editor_absoluteX="185dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

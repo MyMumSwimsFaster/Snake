@@ -22,6 +22,10 @@ public class EndActivity extends AppCompatActivity implements View.OnClickListen
         playAgain.setOnClickListener(this);
         Button exit = findViewById(R.id.exitGame);
         exit.setOnClickListener(this);
+        /*TextView score = findViewById(R.id.actualscoreTxt);
+        score.setText("");
+        TextView highscore = findViewById(R.id.actualhighscoreTxt);
+        highscore.setText("");*/
     }
 
     @Override
